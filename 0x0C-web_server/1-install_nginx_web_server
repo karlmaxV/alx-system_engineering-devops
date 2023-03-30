@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# installs nginx web server, listening on port 80; dummy index page
+sudo apt update
+sudo apt install nginx
+echo "Hello world!" > /var/www/html/index.html
+service nginx restart
