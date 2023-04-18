@@ -1,6 +1,17 @@
-# SSH client configuration
-exec { 'echo -e "IdentityFile ~/.ssh/holberton\n" >> /etc/ssh/ssh_config':
-  provider => shell,
-  path    => '/etc/ssh/ssh_config',
-  command => 'echo -e "PasswordAuthentication no\n" >> /etc/ssh/ssh_config'
+# Using Puppet, configures SSH config file so that you can connect to a...
+# ...server without typing a password.
+# SSH client configuration configured to use the private key ~/.ssh/holberton
+# SSH client configuration configured to refuse to authenticate using a passwd
+
+include stdlib
+file_line { 'holbie private key':
+    ensure => present,
+    path   => '/etc/ssh/ssh_config',
+    line   => 'IdentityFile ~/.ssh/holberton',
+}
+
+file_line { 'remove pwd authentication':
+    ensure => present,
+    path   => '/etc/ssh/ssh_config',
+    line   => 'PasswordAuthentication no',
 }
