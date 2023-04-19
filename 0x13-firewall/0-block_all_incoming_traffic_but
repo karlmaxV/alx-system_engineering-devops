@@ -1,5 +1,4 @@
-sudo apt-get -y install ufw
-sudo ufw allow ssh  # could do 22 instead of ssh
-sudo ufw allow 443
-sudo ufw allow http  # could do 80 instead of http
-sudo ufw enable  # puts new rules into action
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
+sudo ufw enable
