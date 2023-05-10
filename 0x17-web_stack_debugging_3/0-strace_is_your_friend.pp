@@ -1,7 +1,5 @@
-# Fix an issue when Wordpress is
-# trying to initializes
-
-exec { 'fix-wordpress':
-  command => "/bin/sed -i /var/www/html/wp-settings.php \
-  -e 's/class-wp-locale.phpp/class-wp-locale.php/'"
+# Create a manifest that fixes file name typo
+exec { 'fix_typo':
+  command => 'mv /var/www/html/wp-includes/class-wp-locale.php /var/www/html/wp-includes/class-wp-locale.phpp',
+  path    => '/bin/'
 }
