@@ -1,4 +1,7 @@
 Summary
+
+![image](https://github.com/karlmaxV/alx-system_engineering-devops/assets/98865008/5bd702c1-93df-42d1-b38e-06d266e1e76b)
+
 On September 11th, 2018 at midnight the server access went down resulting in 504 error for anyone trying to access a website. Background on the server being based on a LAMP stack.
 
 Timeline
