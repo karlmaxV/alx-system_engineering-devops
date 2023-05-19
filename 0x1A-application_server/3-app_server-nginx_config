@@ -21,11 +21,19 @@ server {
 
         location /airbnb-onepage {
                 include proxy_params;
+<<<<<<< HEAD
+                proxy_pass http://127.0.0.1:5000;
+=======
                 proxy_pass http://34.232.70.47:5000;
+>>>>>>> 3266aeccb77768ceb8851e2a510f49457731c7d3
         }
 
         location ~ ^/airbnb-dynamic/number_odd_or_even/(\d+)$ {
                 include proxy_params;
+<<<<<<< HEAD
+                proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+=======
                 proxy_pass http://34.232.70.47:5001/number_odd_or_even/$1;
+>>>>>>> 3266aeccb77768ceb8851e2a510f49457731c7d3
         }
 }
